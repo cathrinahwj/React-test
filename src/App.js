@@ -10,13 +10,19 @@ export default function App() {
 
         <footer>
           This project was coded by Cathrina Hao and is{" "}
-          <a href="https://github.com/cathrinahwj/React-test" target="_blank">
+          <span
+            href="https://github.com/cathrinahwj/React-test"
+            target="_blank"
+          >
             open-sourced on GitHub
-          </a>{" "}
+          </span>{" "}
           and{" "}
-          <a href="https://serene-swartz-e9f6f7.netlify.app/" target="_blank">
+          <span
+            href="https://serene-swartz-e9f6f7.netlify.app/"
+            target="_blank"
+          >
             hosted on Netlify
-          </a>
+          </span>
         </footer>
       </div>
     </div>
