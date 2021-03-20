@@ -12,14 +12,12 @@ export default function Weather(props) {
       ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
-      date: "Wednesday 07:00";
+      date: "Wednesday 07:00",
       description: response.data.weather[0].description,
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
       wind: response.data.wind.speed,
       city: response.data.name,
     });
-
-    setReady(true);
   }
 
   if (weatherData.ready) {
@@ -47,8 +45,7 @@ export default function Weather(props) {
         <h1>{weatherData.city}</h1>
         <ul>
           <li>{weatherData.date}</li>
-          <li className="text-capitalize">
-            {weatherData.description}</li>
+          <li className="text-capitalize">{weatherData.description}</li>
         </ul>
         <div className="row mt-3">
           <div className="col-6">
@@ -77,7 +74,7 @@ export default function Weather(props) {
     );
   } else {
     const apiKey = "2076e06bc0e052a27f417aa4bccf1283";
-    
+
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
